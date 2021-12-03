@@ -153,18 +153,20 @@ main img {
     max-width: 100%;
     margin: auto;
 }
-main .fas {
-    display: block;
-    color: #2ab02a;
-    border: solid #2ab02a 1px;
-    border-radius: 100%;
+main section article picture .fas {
+    
+    color: #39b54a;
+    border: solid #39b54a 1px;
+    background-color: #FFF;
+    border-radius: 50%;
     font-size: 16px;
-    margin-left: 15px;
     padding: 5px;
-    background-color: white;
+    display: block;
+    margin-left: 15px;
     position: absolute;
     right: 20px;
-    
+    height: 30px;
+    top: -15px;
 }
 .precio {
     font-size: 18px;

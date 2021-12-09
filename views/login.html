@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+<body>
+    <header id="header"> 
+        <section class="top-bar-pc">
+            <section class="top-bar">
+                <img id="logo" src="/images/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre">
+                <div class="search">
+                    <h3 class="search-box">Buscar productos, marcas</h3>
+                    <picture class= "icon">
+                        <i class="fas fa-search"></i>
+                    </picture>
+                </div>
+            </section>
+            <section id="cuotas">
+                <picture><i class="fas fa-hand-holding-usd"></i></picture>
+                <h3>Comprá en cuotas y sin tarjeta de crédito</h3>
+            </section>
+        </section>
+        <nav class="inferior-bar">
+            <nav id="nav1">
+                <a href="#">Ofertas</a>
+                <a href="#">Tiendas Oficiales</a>
+                <a href="#">Vender</a>
+                <a href="#">Ayuda</a>
+            </nav>
+            <nav id="nav2">
+                <div><a href="/register">Creá tu cuenta <picture><i class="far fa-id-card"></i></picture></a></div>
+                <div><a href="/login">Ingresá <picture><i class="fas fa-sign-in-alt"></i></picture></a></div>
+                <div><a href="#MisCompras">Mis compras <picture><i class="fas fa-shopping-cart"></i></picture></a></div>
+            </nav>
+            <nav id="hamburguesa">
+                <picture><i class="fas fa-bars"></i></picture>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        <form action="/" method="get" id="login">
+            <div>
+                <label for="usuario">Nombre de usuari@:</label>
+                <input type="text" name="usuario" id="usuario" pattern="^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$" title="El nombre de usuario debe estar compuesto por entre 8 y 20 dígitos" required>
+            </div>
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" id="contrasena" required>
+            </div>
+            <div>
+                <a href="/"><button type="submit" form="registro" value="Submit">Enviar</button></a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

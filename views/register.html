@@ -37,8 +37,8 @@
                 <a href="#">Ayuda</a>
             </nav>
             <nav id="nav2">
-                <div><a href="/views/register.html">Creá tu cuenta <picture><i class="far fa-id-card"></i></picture></a></div>
-                <div><a href="#Ingresa">Ingresá <picture><i class="fas fa-sign-in-alt"></i></picture></a></div>
+                <div><a href="/register">Creá tu cuenta <picture><i class="far fa-id-card"></i></picture></a></div>
+                <div><a href="/login">Ingresá <picture><i class="fas fa-sign-in-alt"></i></picture></a></div>
                 <div><a href="#MisCompras">Mis compras <picture><i class="fas fa-shopping-cart"></i></picture></a></div>
             </nav>
             <nav id="hamburguesa">
@@ -46,5 +46,78 @@
             </nav>
         </nav>
     </header>
+    <main>
+        <section id="register"> 
+            <header class="main_header" id="register_header">
+                <h2>Regístrate</h2>
+            </header>
+            <form action="/" method="get" id="registro">
+                <div>
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" title="El nombre y apellido debe estar compuesto por dos palabras y un espacio entre ellas" required>
+                </div>
+                <div>
+                    <label for="usuario">Nombre de usuari@:</label>
+                    <input type="text" name="usuario" id="usuario" pattern="^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$" title="El nombre de usuario debe estar compuesto por entre 8 y 20 dígitos" required>
+                </div>
+                <div>
+                    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+                </div>
+                <div>
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" name="domicilio" id="domicilio" required>
+                </div>
+                <div>
+                    <label>Perfil:</label>
+                    <select for="comprar_o_vender" required>
+                        <option value="comprador" name="comprar_o_vender">Comprador</option>
+                        <option value="vendedor" name="comprar_o_vender">Vendedor</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Categorías de interés:</label>
+                    <ul class="categorias">
+                        <li>
+                            <label class="categoria" for="electro">Electro</label>
+                            <input type="checkbox" name="electro" id="electro">
+                        </li>
+                        <li>
+                            <label class="categoria" for="moda">Moda</label>
+                            <input type="checkbox" name="moda" id="moda">
+                        </li>
+                        <li>
+                            <label class="categoria" for="moda">Hogar</label>
+                            <input type="checkbox" name="hogar" id="hogar">
+                        </li>
+                        <li>
+                            <label class="categoria" for="moda">Juguetería</label>
+                            <input type="checkbox" name="jugueteria" id="jugueteria">
+                        </li>
+                        <li>
+                            <label class="categoria" for="moda">Vida sana</label>
+                            <input type="checkbox" name="vida_sana" id="vida_sana">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <label for="foto">Foto:</label>
+                    <input type="file" name="foto" id="foto" accept=".jpg,.jpeg,.png">
+                </div>
+                <div>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" name="contrasena" id="contrasena" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+                </div>
+                <div>
+                    <label for="confirmar_contrasena">Confirmar contraseña:</label>
+                    <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" required>
+                </div>
+                <div>
+                    <a href="/"><button type="submit" form="registro" value="Submit">Enviar</button></a>
+                    <button type="reset" form="registro" value="Reset">Borrar</button>
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
